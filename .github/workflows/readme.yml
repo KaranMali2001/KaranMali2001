@@ -5,28 +5,30 @@ on:
     - cron: '0 0 */3 * *' # every 3 days
   workflow_dispatch:
 
+permissions:
+  contents: write
+  metadata: read
+  repositories: read
+
 jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.PAT }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies (jq, gh, git, cloc)
         run: |
           sudo apt-get update
           sudo apt-get install -y jq gh git cloc
 
-      - name: Authenticate GitHub CLI
-        run: gh auth login --with-token <<< "$GH_TOKEN"
-
       - name: Clone all repos
         run: |
           mkdir repos && cd repos
           gh repo list KaranMali2001 --limit 200 --json nameWithOwner -q '.[].nameWithOwner' \
-          | xargs -L1 -I{} gh repo clone {} .
+          | xargs -L1 -I{} gh repo clone {} . || true
 
       - name: Count lines with cloc
         run: |
