@@ -14,18 +14,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install dependencies (jq, gh, git)
+      - name: Install dependencies (jq, gh, git, cloc)
         run: |
           sudo apt-get update
-          sudo apt-get install -y jq gh git
-
-      - name: Install tokei
-        run: |
-          TOIKE_VERSION="12.1.2"
-          curl -L "https://github.com/XAMPPRocky/tokei/releases/download/v${TOIKE_VERSION}/tokei-${TOIKE_VERSION}-x86_64-unknown-linux-gnu.tar.gz" -o tokei.tar.gz
-          tar -xzf tokei.tar.gz
-          sudo mv tokei /usr/local/bin/
-          tokei --version
+          sudo apt-get install -y jq gh git cloc
 
       - name: Authenticate GitHub CLI
         run: gh auth login --with-token <<< "$GH_TOKEN"
@@ -36,17 +28,61 @@ jobs:
           gh repo list KaranMali2001 --limit 200 --json nameWithOwner -q '.[].nameWithOwner' \
           | xargs -L1 -I{} gh repo clone {} .
 
-      - name: Count lines
-        run: tokei --output json repos > loc.json
+      - name: Count lines with cloc
+        run: |
+          cloc repos \
+            --json \
+            --exclude-ext=yml,yaml,json,mod,sum,lock,toml,ini,env,config,cfg \
+            --exclude-dir=test,tests,__tests__,spec,specs,node_modules,vendor,target,build,dist,.git \
+            --skip-file-extension="test\.go$,.*\.test\.js$,.*\.test\.ts$,.*\.spec\.js$,.*\.spec\.ts$,.*_test\.py$,test_.*\.py$" \
+            --include-lang="Go,TypeScript,JavaScript,Python,C++,C,Rust,Java,Dockerfile,Makefile" > loc.json
 
       - name: Generate LOC summary
         run: |
-          total=$(jq '[.languages[].code] | add' loc.json)
-          jq '.languages | to_entries | map("- \(.key): \(.value.code)") | . + ["- Total: '"$total"'"] | join("\n")' -r loc.json > LOC.md
+          # Extract language data and calculate totals
+          go_lines=$(jq -r '.Go.code // 0' loc.json)
+          ts_lines=$(jq -r '.TypeScript.code // 0' loc.json)
+          js_lines=$(jq -r '.JavaScript.code // 0' loc.json)
+          python_lines=$(jq -r '.Python.code // 0' loc.json)
+          cpp_lines=$(jq -r '.["C++"].code // 0' loc.json)
+          c_lines=$(jq -r '.C.code // 0' loc.json)
+          rust_lines=$(jq -r '.Rust.code // 0' loc.json)
+          java_lines=$(jq -r '.Java.code // 0' loc.json)
+          dockerfile_lines=$(jq -r '.Dockerfile.code // 0' loc.json)
+          makefile_lines=$(jq -r '.Makefile.code // 0' loc.json)
+
+          # Calculate total
+          total_lines=$(jq -r '[.[] | select(type == "object" and has("code")) | .code] | add // 0' loc.json)
+
+          # Generate markdown with highlighting for Go and TypeScript
+          cat > LOC.md << EOF
+          * **🚀 Go**: $go_lines
+          * **⚡ TypeScript**: $ts_lines
+          * JavaScript: $js_lines
+          * Python: $python_lines
+          * C++: $cpp_lines
+          * C: $c_lines
+          * Rust: $rust_lines
+          * Java: $java_lines
+          * Dockerfile: $dockerfile_lines
+          * Makefile: $makefile_lines
+          * **Total**: $total_lines
+          EOF
 
       - name: Update README
         run: |
-          awk '/<!--LOC_START-->/ {print; system("cat LOC.md"); found=1; next} /<!--LOC_END-->/ {found=0} !found' README.md > README_new.md
+          awk '
+          /<!--LOC_START-->/ {
+            print
+            system("cat LOC.md")
+            found=1
+            next
+          }
+          /<!--LOC_END-->/ {
+            found=0
+          }
+          !found
+          ' README.md > README_new.md
           mv README_new.md README.md
 
       - name: Commit changes

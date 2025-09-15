@@ -9,21 +9,21 @@
 
 ## 🔭 About Me
 
-* I build scalable and maintainable backend systems powered by clean architecture and best practices.
-* Strong with databases (relational & NoSQL), authentication & authorization, performance optimization, and error handling.
-* Always learning new tools and techniques — currently exploring microservices in Go, advanced testing, and cloud deployment.
+- I build scalable and maintainable backend systems powered by clean architecture and best practices.
+- Strong with databases (relational & NoSQL), authentication & authorization, performance optimization, and error handling.
+- Always learning new tools and techniques — currently exploring microservices in Go, advanced testing, and cloud deployment.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Area            | Tools & Languages                                       |
-| --------------- | ------------------------------------------------------- |
-| Languages       | Go, TypeScript (Node.js), JavaScript                    |
-| Frameworks      | Express, Fastify, Gin                                   |
-| Databases       | PostgreSQL, MongoDB, Redis                              |
-| Tools & Infra   | Docker, JWT, REST APIs, Git, Linux                      |
-| Testing / CI/CD | Jest / Mocha, Supertest, GitHub Actions, Docker Compose |
+| Area          | Tools & Languages                    |
+| ------------- | ------------------------------------ |
+| Languages     | Go, TypeScript (Node.js), JavaScript |
+| Frameworks    | Express, Chi, Gin ,NextJs            |
+| Databases     | PostgreSQL, MongoDB, Redis           |
+| Tools & Infra | Docker, JWT, REST APIs, Git, Linux   |
+| CI/CD         | GitHub Actions, Docker Compose       |
 
 ---
 
@@ -44,16 +44,21 @@ Here are some backend-focused projects of mine. Click to explore their code 🔍
 
 <!--LOC_START-->
 
-* Go: 0
-* TypeScript: 0
-* JavaScript: 0
-* SQL: 0
-* C++: 0
-* Total: 0
+- **🚀 Go**: 0
+- **⚡ TypeScript**: 0
+- JavaScript: 0
+- Python: 0
+- C++: 0
+- C: 0
+- Rust: 0
+- Java: 0
+- Dockerfile: 0
+- Makefile: 0
+- **Total**: 0
 
 <!--LOC_END-->
 
-*(This section updates automatically every 3 days via GitHub Actions)*
+_(This section updates automatically every 3 days via GitHub Actions)_
 
 ---
 
@@ -65,22 +70,22 @@ Here are some backend-focused projects of mine. Click to explore their code 🔍
 
 ---
 
-## 🌱 What I’m Learning & Exploring
+## 🌱 What I'm Learning & Exploring
 
-* Building microservices in Go
-* Implementing robust integration / end-to-end tests
-* Cloud native deployment (Docker, Kubernetes, maybe AWS/GCP)
-* Message queues / event-driven architectures
+- Building microservices in Go
+- Implementing robust integration / end-to-end tests
+- Cloud native deployment (Docker, Kubernetes, maybe AWS/GCP)
+- Message queues / event-driven architectures
 
 ---
 
-## 📫 Let’s Connect
+## 📫 Let's Connect
 
-* 🌐 Portfolio / Blog: [karan5599.tech](https://karan5599.tech)
-* 💼 LinkedIn: [karan5599](https://www.linkedin.com/in/karan5599/)
-* 📧 Email: [karanmali122001@gmail.com](mailto:karanmali122001@gmail.com)
+- 🌐 Portfolio / Blog: [karan5599.tech](https://karan5599.tech)
+- 💼 LinkedIn: [karan5599](https://www.linkedin.com/in/karan5599/)
+- 📧 Email: [karanmali122001@gmail.com](mailto:karanmali122001@gmail.com)
 
 ---
 
 Thank you for visiting my profile!
-Let’s build something awesome together 🤝
+Let's build something awesome together 🤝
