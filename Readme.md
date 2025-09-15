@@ -1,95 +1,108 @@
-![Banner GitHub](https://github.com/KaranMali2001/KaranMali2001/assets/banner-placeholder.png)
+<!-- HEADER / INTRO -->
 
 <div align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FKaranMali2001&label=VISITORS&labelColor=%23000&countColor=%230A0209" />
-  <br><br>
-  <a href="https://www.linkedin.com/in/karan5599/"><img src="https://img.shields.io/badge/LinkedIn-d5d5d5?style=for-the-badge&logo=linkedin&logoColor=0A0209" /></a>
-  <a href="https://medium.com/@karanmali122001"><img src="https://img.shields.io/badge/medium-d5d5d5?style=for-the-badge&logo=Medium&logoColor=0A0209" /></a>
-  <a href="https://karan5599.tech/"><img src="https://img.shields.io/badge/portfolio-d5d5d5?style=for-the-badge&logo=Portfolio&logoColor=0A0209" /></a>
-  <a href="mailto:karanmali122001@gmail.com"><img src="https://img.shields.io/badge/Gmail-d5d5d5?style=for-the-badge&logo=gmail&logoColor=0A0209" /></a>
+  <h1>Hi there, I'm <strong>Karan Mali</strong> 👋</h1>
+  <p>Backend Developer • API / Microservices • Go | Node.js | TypeScript</p>
 </div>
 
 ---
 
-## 👋 About Me
+## 🔭 About Me
 
-Hi, I'm **Karan Mali** — a backend engineer passionate about building reliable, scalable systems and AI-enabled platforms.
-
-- 🛠️ Currently building at **Autonomis**, where I lead work on multi-tenant architectures, RBAC, and analytics systems.
-- 💼 Ex-PixelSaffron | Developed secure payment-integrated backend systems.
-- 🧠 Learning by building — from microservices to AI-powered tools.
-- 📩 Wrote [The ORM Trap That Cost Me a Backend Job](https://medium.com/@karanmali122001/the-orm-trap-that-cost-me-a-backend-job-042c710d5163), which hit 2k+ reads.
+* I build scalable and maintainable backend systems powered by clean architecture and best practices.
+* Strong with databases (relational & NoSQL), authentication & authorization, performance optimization, and error handling.
+* Always learning new tools and techniques — currently exploring microservices in Go, advanced testing, and cloud deployment.
 
 ---
 
-## 🚀 Projects
+## 🛠 Tech Stack
 
-### 1. [Elevare](https://elevareapp.com/) – AI Email Management System  
-**Stack**: Next.js, TypeScript, Prisma, Node.js, GitHub Actions, RazorPay, Groq (LLM)  
-- AI summaries, contextual replies  
-- Razorpay for subscriptions  
-- CI/CD with GitHub Actions
-
-### 2. [Enhanced Dimaag](https://enhanced-dimaag.vercel.app/) – AI Content Sharing  
-**Stack**: React, LangChain, Gemini, Clerk, PostgreSQL, Drizzle  
-- AI-powered summaries for YouTube links  
-- Clerk-based access control (public/private)
-
-### 3. [Matchup](https://github.com/KaranMali2001/MatchUp) – Tournament Manager  
-**Stack**: Go, PostgreSQL, Docker  
-- Full tournament lifecycle management  
-- High concurrency via Goroutines
-
-### 4. [Microservices Platform](https://github.com/KaranMali2001/Golang-micro-services)  
-**Stack**: Go, gRPC, GraphQL, PostgreSQL, sqlc  
-- Strongly-typed microservices platform  
-- Docker Compose orchestration
-
-### 5. [Bidding Management System](https://bidding-management-system.vercel.app/)  
-**Stack**: Express, Prisma, Cloudinary, esbuild  
-- Role-based bidding (Sellers/Bidders)  
-- File uploads, real-time dashboard
-
-### 6. [MedicalBlocks](https://patient-management-system-pglite.vercel.app/)  
-**Stack**: React, ShadCn UI, TypeScript, PGlite, Vite  
-- Fully offline in-browser DB (WASM + IndexedDB)  
-- Patient management + real-time sync
-
-### 7. [Movie Explorer](https://ultimatecoders-interview.vercel.app/)  
-**Stack**: Next.js 15, React Query, Tailwind CSS 4  
-- Browse/search movies via TMDB API  
-- Infinite scroll, dark mode, modals
-
-### 8. [Course Selling API](https://github.com/KaranMali2001/Course-Selling-App)  
-**Stack**: Golang, Echo, MongoDB, JWT  
-- Admin panel for courses  
-- JWT-based auth + MongoDB storage
+| Area            | Tools & Languages                                       |
+| --------------- | ------------------------------------------------------- |
+| Languages       | Go, TypeScript (Node.js), JavaScript                    |
+| Frameworks      | Express, Fastify, Gin                                   |
+| Databases       | PostgreSQL, MongoDB, Redis                              |
+| Tools & Infra   | Docker, JWT, REST APIs, Git, Linux                      |
+| Testing / CI/CD | Jest / Mocha, Supertest, GitHub Actions, Docker Compose |
 
 ---
 
-## 💻 Tech Stack
+## 📁 My Projects
 
-| Category        | Tools & Technologies |
-|----------------|----------------------|
-| **Languages**     | Go, TypeScript, JavaScript, SQL, C++ |
-| **Backend**       | Node.js, Express, gRPC, REST, GraphQL |
-| **Databases**     | PostgreSQL, MongoDB, Supabase, PGlite |
-| **Tools & DevOps**| Docker, GitHub Actions, Airflow |
-| **Auth**          | Clerk, JWT, RBAC, Multi-tenancy |
-| **AI/LLMs**       | Groq, LangChain, Gemini |
-| **Payments**      | RazorPay, PhonePe |
+Here are some backend-focused projects of mine. Click to explore their code 🔍
 
----
-
-## 📬 Contact
-
-- 🔗 **Portfolio**: [karan5599.tech](https://karan5599.tech)  
-- 🧑‍💻 **GitHub**: [KaranMali2001](https://github.com/KaranMali2001)  
-- ✍️ **Medium**: [@karanmali122001](https://medium.com/@karanmali122001)  
-- 💼 **LinkedIn**: [karan5599](http://www.linkedin.com/in/karan5599)  
-- 📮 **LeetCode**: [karanmali122001](https://leetcode.com/u/karanmali122001/)  
-- 📧 **Email**: karanmali122001@gmail.com  
+| Project               | What It Does / Key Features                                                       |
+| --------------------- | --------------------------------------------------------------------------------- |
+| **Mini-Ride-Booking** | Ride-booking lifecycle: booking, driver/rider matching, JWT auth, booking states. |
+| **Finance-Tracker**   | CRUD operations, transaction summaries, category filtering, secure APIs.          |
+| **Habit-Tracker**     | Schedule-based tasks, reminders, user profiles, background jobs.                  |
+| **MatchUp**           | Tournament / bracket logic, validations, REST endpoints, error handling.          |
 
 ---
 
-_Thanks for visiting my GitHub! Feel free to connect or collaborate._
+## 🚀 Code Sample
+
+Here’s a snippet showing how I handle error responses in Node.js + TypeScript — clean, consistent, and JSON-API style:
+
+```ts
+// src/middleware/errorHandler.ts
+import { Request, Response, NextFunction } from 'express';
+
+interface AppError extends Error {
+  statusCode?: number;
+  isOperational?: boolean;
+}
+
+function errorHandler(
+  err: AppError,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  console.error(`[ERROR] ${err.message}`, err);
+
+  const statusCode = err.statusCode ?? 500;
+  const message = err.isOperational
+    ? err.message
+    : 'Something went wrong';
+
+  res.status(statusCode).json({
+    success: false,
+    error: {
+      message,
+    }
+  });
+}
+
+export default errorHandler;
+```
+
+---
+
+## 📈 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=KaranMali2001&show_icons=true&theme=dark&hide=issues" />
+</div>
+
+---
+
+## 🌱 What I’m Learning & Exploring
+
+* Building microservices in Go
+* Implementing robust integration / end-to-end tests
+* Cloud native deployment (Docker, Kubernetes, maybe AWS/GCP)
+* Message queues / event-driven architectures
+
+---
+
+## 📫 Let’s Connect
+
+* 🌐 Portfolio / Blog: *(add link here if you have one)*
+* 💼 LinkedIn: [karan5599](https://www.linkedin.com/in/karan5599)
+* 📧 Email: *(add email if you’d like to share)*
+
+---
+
+Thank you for visiting my profile!
+Let’s build something awesome together 🤝
