@@ -40,49 +40,27 @@ Here are some backend-focused projects of mine. Click to explore their code 🔍
 
 ---
 
-## 🚀 Code Sample
+## 📊 Lines of Code Written
 
-Here’s a snippet showing how I handle error responses in Node.js + TypeScript — clean, consistent, and JSON-API style:
+<!--LOC_START-->
 
-```ts
-// src/middleware/errorHandler.ts
-import { Request, Response, NextFunction } from 'express';
+* Go: 0
+* TypeScript: 0
+* JavaScript: 0
+* SQL: 0
+* C++: 0
+* Total: 0
 
-interface AppError extends Error {
-  statusCode?: number;
-  isOperational?: boolean;
-}
+<!--LOC_END-->
 
-function errorHandler(
-  err: AppError,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
-  console.error(`[ERROR] ${err.message}`, err);
-
-  const statusCode = err.statusCode ?? 500;
-  const message = err.isOperational
-    ? err.message
-    : 'Something went wrong';
-
-  res.status(statusCode).json({
-    success: false,
-    error: {
-      message,
-    }
-  });
-}
-
-export default errorHandler;
-```
+*(This section updates automatically every 3 days via GitHub Actions)*
 
 ---
 
 ## 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=KaranMali2001&show_icons=true&theme=dark&hide=issues" />
+  <img src="https://github-readme-stats.vercel.app/api?username=karanmali2001&show_icons=true&theme=dark&hide=issues" />
 </div>
 
 ---
@@ -98,9 +76,9 @@ export default errorHandler;
 
 ## 📫 Let’s Connect
 
-* 🌐 Portfolio / Blog: *(add link here if you have one)*
-* 💼 LinkedIn: [karan5599](https://www.linkedin.com/in/karan5599)
-* 📧 Email: *(add email if you’d like to share)*
+* 🌐 Portfolio / Blog: [karan5599.tech](https://karan5599.tech)
+* 💼 LinkedIn: [karan5599](https://www.linkedin.com/in/karan5599/)
+* 📧 Email: [karanmali122001@gmail.com](mailto:karanmali122001@gmail.com)
 
 ---
 
