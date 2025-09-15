@@ -64,21 +64,17 @@ I specialize in **high-performance backend systems** and **scalable microservice
 ## 📊 Code Statistics
 
 <!--LOC_START-->
-<div align="center">
-
-### 💻 **Active Development**
-
-|   **Language**    | **Lines of Code** | **Contribution** |
-| :---------------: | :---------------: | :--------------: |
-|     **🚀 Go**     |     **3,488**     |    🟦🟦🟦⬜⬜    |
-| **⚡ TypeScript** |    **44,252**     |    🟦🟦🟦🟦🟦    |
-|    JavaScript     |        939        |    🟦⬜⬜⬜⬜    |
-|      Python       |       1,451       |    🟦⬜⬜⬜⬜    |
-|    Dockerfile     |        125        |    🟦⬜⬜⬜⬜    |
-
-### 🎯 **Total Impact: 100,510 Lines**
-
-</div>
+* **🚀 Go**: 3488
+* **⚡ TypeScript**: 44252
+* JavaScript: 939
+* Python: 1451
+* C++: 0
+* C: 0
+* Rust: 0
+* Java: 0
+* Dockerfile: 125
+* Makefile: 0
+* **Total**: 100510
 <!--LOC_END-->
 
 _(Auto-updated every 3 days via GitHub Actions)_
