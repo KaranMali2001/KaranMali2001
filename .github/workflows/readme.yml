@@ -74,6 +74,20 @@ jobs:
 
       - name: Update README
         run: |
+          if [ ! -f README.md ]; then
+            echo "README.md not found in repository. Creating basic README with LOC section."
+            cat > README.md << 'EOF'
+          # My GitHub Profile
+
+          ## 📊 Lines of Code Written
+
+          <!--LOC_START-->
+          <!--LOC_END-->
+
+          *(This section updates automatically every 3 days via GitHub Actions)*
+          EOF
+          fi
+
           awk '
           /<!--LOC_START-->/ {
             print
