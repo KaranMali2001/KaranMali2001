@@ -65,7 +65,7 @@ I specialize in **high-performance backend systems** and **scalable microservice
 
 <!--LOC_START-->
 * **🚀 Go**: 3488
-* **⚡ TypeScript**: 44252
+* **⚡ TypeScript**: 41278
 * JavaScript: 939
 * Python: 1451
 * C++: 0
@@ -74,7 +74,7 @@ I specialize in **high-performance backend systems** and **scalable microservice
 * Java: 0
 * Dockerfile: 125
 * Makefile: 0
-* **Total**: 100510
+* **Total**: 94562
 <!--LOC_END-->
 
 _(Auto-updated every 3 days via GitHub Actions)_
